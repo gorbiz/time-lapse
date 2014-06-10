@@ -5,6 +5,7 @@
 
 mkdir -p snaps
 
+# --scene-ratio=900 gives me about 1 photo per minute, 9000 should give me 1 every 10 minutes
 vlc --video-filter=scene --vout=dummy --aout=dummy --intf=dummy \
 --scene-format=png \
 --scene-ratio=900 \
