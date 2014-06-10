@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Running this in a screen might be helpful:
+# screen -S capturing ./start_capture
+
 mkdir -p snaps
 
 vlc --video-filter=scene --vout=dummy --aout=dummy --intf=dummy \
