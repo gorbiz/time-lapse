@@ -1,7 +1,16 @@
 #!/bin/sh
-find snaps/*.png -newermt $(date -d today +%Y-%m-%d) > /tmp/frames.txt && \
+
+# Warning: VERY similar to render_full
+# TODO take argument [today|full]
+
+today=$(date -d today +%Y-%m-%d)
+
+find snaps/*.png -newermt $(date -d today +%Y-%m-%d) > /tmp/frames_today.txt && \
 mencoder -nosound -ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell:autoaspect:vqscale=3 -vf \
 scale=1280:720 -mf \
 type=png:fps=25 \
-mf://@/tmp/frames.txt \
--o videos/$(date -d today +%Y-%m-%d).avi
+mf://@/tmp/frames_today.txt \
+-o videos/$today.avi
+
+# Make a symlink for convenience
+ln -sf $today.avi videos/today.avi
