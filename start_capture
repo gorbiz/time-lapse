@@ -1,0 +1,11 @@
+#!/bin/sh
+
+mkdir -p snaps
+
+vlc --video-filter=scene --vout=dummy --aout=dummy --intf=dummy \
+--scene-format=png \
+--scene-ratio=900 \
+--scene-prefix=started-$(date -d today +%Y-%m-%d_%H-%M-%S)- \
+--scene-path=snaps/ \
+v4l2:///dev/video1:width=1280:height=720 \
+vlc://quit
