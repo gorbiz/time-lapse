@@ -1,6 +1,6 @@
 How I use this
 ==============
-Me and my friend **dedicated** an Asus Eee **PC** to make **time-lapse videos** using an external HD **web-cam**.
+Me and my friend **dedicated** an Asus Eee **PC** to make **time-lapse videos** using an external HD **webcam**.
 The computer is running the **GNU/Linux** distribution CrunchBang (based on Debian like Ubuntu).
 
 Installing some software
@@ -12,14 +12,14 @@ Installing some software
 
 As CrunchBang comes with APT I can simply
 1. issue this in a terminal ```sudo apt-get install vlc mencoder screen cheese```
-2. Now you might want to run ```cheese``` and try out your web-cam, check it's resolution and what not.
+2. Now you might want to run ```cheese``` and try out your webcam, check it's resolution and what not.
 
 Setting up the scripts
 ----------------------
 1. Then we'll get the scripts ```git clone git@github.com:gorbiz/time-lapse.git```
 2. ```cd time-lapse```
 3. You might want to edit the capturing script ```nano start_capture```
-4. When all looks good start capturing ```screen -S capturing ./start_capture```. XXX sometimes it breaks; try again :P.
+4. When all looks good start capturing ```screen -S capturing ./start_capture```. XXX sometimes it breaks; try again :P. (Leave the screen by <kbd>Ctrl</kbd> + <kbd>a</kbd>, let go and hit <kbd>d</kbd>)
 
 Photos should now stack up in the snaps/ folder. You can assemble all of them into a film clip using ```render_full``` or to include only today's ```render_today```. However you'll probably want to **modify these scripts** to your liking.
 
