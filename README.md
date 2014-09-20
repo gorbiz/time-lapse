@@ -11,20 +11,21 @@ Installing some software
  - cheese (optional, good for testing webcam and tweaking its position and angle)
 
 As CrunchBang comes with APT I can simply
-1. issue this in a terminal ```sudo apt-get install vlc mencoder screen cheese```
-2. Now you might want to run ```cheese``` and try out your webcam, check it's resolution and what not.
+
+1. issue this in a terminal `sudo apt-get install vlc mencoder screen cheese`
+2. Now you might want to run `cheese` and try out your webcam, check it's resolution and what not.
 
 Setting up the scripts
 ----------------------
-1. Then we'll get the scripts ```git clone git@github.com:gorbiz/time-lapse.git```
-2. ```cd time-lapse```
-3. You might want to edit the capturing script ```nano start_capture```
-4. When all looks good start capturing ```screen -S capturing ./start_capture```. XXX sometimes it breaks; try again :P. (Leave the screen by <kbd>Ctrl</kbd> + <kbd>a</kbd>, let go and hit <kbd>d</kbd>)
+1. Then we'll get the scripts `git clone git@github.com:gorbiz/time-lapse.git`
+2. `cd time-lapse`
+3. You might want to edit the capturing script `nano start_capture`
+4. When all looks good start capturing `screen -S capturing ./start_capture`. XXX sometimes it breaks; try again :P. (Leave the screen by <kbd>Ctrl</kbd> + <kbd>a</kbd>, let go and hit <kbd>d</kbd>)
 
-Photos should now stack up in the snaps/ folder. You can assemble all of them into a film clip using ```render_full``` or to include only today's ```render_today```. However you'll probably want to **modify these scripts** to your liking.
+Photos should now stack up in the snaps/ folder. You can assemble all of them into a film clip using `render_full` or to include only today's `render_today`. However you'll probably want to **modify these scripts** to your liking.
 
 I like to automate all of that so I enter
-```crontab -e``` and put something like this in there:
+`crontab -e` and put something like this in there:
 ```
 # Make a time-lapse video for today
 */15 * * * * cd ~/time-lapse && ./render_today && cp ~/time-lapse/videos/today.avi ~/Dropbox/plant-lapse/
@@ -35,3 +36,9 @@ I like to automate all of that so I enter
 # Put the latest snapshot in Dropbox
 * * * * * ls -t ~/time-lapse/snaps/*.png | head --lines=1 | xargs -i cp {} ~/Dropbox/plant-lapse/recent.png
 ```
+
+Rejoice!
+--------
+![time-lapse gif of our plants](http://gorbiz.github.io/time-lapse/images/plant-time-lapse.gif)
+
+<q>The earth has yielded its produce; God, our God, blesses us.</q> (Psalms 67:6)
