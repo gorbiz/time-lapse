@@ -4,9 +4,9 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
     <title>Time-lapse by gorbiz</title>
   </head>
@@ -44,11 +44,13 @@ The computer is running the <strong>GNU/Linux</strong> distribution CrunchBang (
 <strong>mencoder</strong> (to make the stills into videos)</li>
 <li>screen (optional, handy to keep track of the constantly running capturing process)</li>
 <li>cheese (optional, good for testing webcam and tweaking its position and angle)</li>
-</ul><p>As CrunchBang comes with APT I can simply
-1. issue this in a terminal <code>sudo apt-get install vlc mencoder screen cheese</code>
-2. Now you might want to run <code>cheese</code> and try out your webcam, check it's resolution and what not.</p>
+</ul><p>As CrunchBang comes with APT I can simply</p>
 
-<h2>
+<ol>
+<li>issue this in a terminal <code>sudo apt-get install vlc mencoder screen cheese</code>
+</li>
+<li>Now you might want to run <code>cheese</code> and try out your webcam, check it's resolution and what not.</li>
+</ol><h2>
 <a name="setting-up-the-scripts" class="anchor" href="#setting-up-the-scripts"><span class="octicon octicon-link"></span></a>Setting up the scripts</h2>
 
 <ol>
@@ -72,6 +74,13 @@ The computer is running the <strong>GNU/Linux</strong> distribution CrunchBang (
 # Put the latest snapshot in Dropbox
 * * * * * ls -t ~/time-lapse/snaps/*.png | head --lines=1 | xargs -i cp {} ~/Dropbox/plant-lapse/recent.png
 </code></pre>
+
+<h2>
+<a name="rejoice" class="anchor" href="#rejoice"><span class="octicon octicon-link"></span></a>Rejoice!</h2>
+
+<p><img src="http://gorbiz.github.io/time-lapse/images/plant-time-lapse.gif" alt="time-lapse gif of our plants"></p>
+
+<p><q>The earth has yielded its produce; God, our God, blesses us.</q> (Psalms 67:6)</p>
       </section>
     </div>
 
