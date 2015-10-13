@@ -1,7 +1,7 @@
 How I use this
 ==============
-Me and my friend **dedicated** an Asus Eee **PC** to make **time-lapse videos** using an external HD **webcam**.
-The computer is running the **GNU/Linux** distribution CrunchBang (based on Debian like Ubuntu).
+We **dedicated** an Asus Eee **PC** to make **time-lapse videos** using an external HD **webcam**.
+The computer is running the **GNU/Linux** distribution CrunchBang (based on Debian, just like Ubuntu).
 
 Installing some software
 ------------------------
