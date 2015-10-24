@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
     <title>Time-lapse by gorbiz</title>
@@ -29,13 +29,13 @@
     <div class="container">
       <section id="main_content">
         <h1>
-<a name="how-i-use-this" class="anchor" href="#how-i-use-this"><span class="octicon octicon-link"></span></a>How I use this</h1>
+<a id="how-i-use-this" class="anchor" href="#how-i-use-this" aria-hidden="true"><span class="octicon octicon-link"></span></a>How I use this</h1>
 
-<p>Me and my friend <strong>dedicated</strong> an Asus Eee <strong>PC</strong> to make <strong>time-lapse videos</strong> using an external HD <strong>webcam</strong>.
-The computer is running the <strong>GNU/Linux</strong> distribution CrunchBang (based on Debian like Ubuntu).</p>
+<p>We <strong>dedicated</strong> an Asus Eee <strong>PC</strong> to make <strong>time-lapse videos</strong> using an external HD <strong>webcam</strong>.
+The computer is running the <strong>GNU/Linux</strong> distribution CrunchBang (based on Debian, just like Ubuntu).</p>
 
 <h2>
-<a name="installing-some-software" class="anchor" href="#installing-some-software"><span class="octicon octicon-link"></span></a>Installing some software</h2>
+<a id="installing-some-software" class="anchor" href="#installing-some-software" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing some software</h2>
 
 <ul>
 <li>
@@ -44,14 +44,18 @@ The computer is running the <strong>GNU/Linux</strong> distribution CrunchBang (
 <strong>mencoder</strong> (to make the stills into videos)</li>
 <li>screen (optional, handy to keep track of the constantly running capturing process)</li>
 <li>cheese (optional, good for testing webcam and tweaking its position and angle)</li>
-</ul><p>As CrunchBang comes with APT I can simply</p>
+</ul>
+
+<p>As CrunchBang comes with APT I can simply</p>
 
 <ol>
 <li>issue this in a terminal <code>sudo apt-get install vlc mencoder screen cheese</code>
 </li>
 <li>Now you might want to run <code>cheese</code> and try out your webcam, check it's resolution and what not.</li>
-</ol><h2>
-<a name="setting-up-the-scripts" class="anchor" href="#setting-up-the-scripts"><span class="octicon octicon-link"></span></a>Setting up the scripts</h2>
+</ol>
+
+<h2>
+<a id="setting-up-the-scripts" class="anchor" href="#setting-up-the-scripts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting up the scripts</h2>
 
 <ol>
 <li>Then we'll get the scripts <code>git clone git@github.com:gorbiz/time-lapse.git</code>
@@ -60,7 +64,9 @@ The computer is running the <strong>GNU/Linux</strong> distribution CrunchBang (
 <li>You might want to edit the capturing script <code>nano start_capture</code>
 </li>
 <li>When all looks good start capturing <code>screen -S capturing ./start_capture</code>. XXX sometimes it breaks; try again :P. (Leave the screen by <kbd>Ctrl</kbd> + <kbd>a</kbd>, let go and hit <kbd>d</kbd>)</li>
-</ol><p>Photos should now stack up in the snaps/ folder. You can assemble all of them into a film clip using <code>render_full</code> or to include only today's <code>render_today</code>. However you'll probably want to <strong>modify these scripts</strong> to your liking.</p>
+</ol>
+
+<p>Photos should now stack up in the snaps/ folder. You can assemble all of them into a film clip using <code>render_full</code> or to include only today's <code>render_today</code>. However you'll probably want to <strong>modify these scripts</strong> to your liking.</p>
 
 <p>I like to automate all of that so I enter
 <code>crontab -e</code> and put something like this in there:</p>
@@ -76,7 +82,7 @@ The computer is running the <strong>GNU/Linux</strong> distribution CrunchBang (
 </code></pre>
 
 <h2>
-<a name="rejoice" class="anchor" href="#rejoice"><span class="octicon octicon-link"></span></a>Rejoice!</h2>
+<a id="rejoice" class="anchor" href="#rejoice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rejoice!</h2>
 
 <p><img src="http://gorbiz.github.io/time-lapse/images/plant-time-lapse.gif" alt="time-lapse gif of our plants"></p>
 
